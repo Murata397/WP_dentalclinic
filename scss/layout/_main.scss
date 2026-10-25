@@ -1,4 +1,10 @@
-.carousel {
+// Bootstrapの.carouselと名前が衝突するため top- を付けている
+.top-carousel-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.top-carousel {
   display: flex;
   width: 100%;
   padding: 0;
@@ -8,13 +14,12 @@
   // 4枚を16秒で自動スライド
   animation: auto-slide 16s infinite;
 
-  .carousel-item {
+  .top-carousel-item {
     flex: 0 0 100%;
     min-width: 0;
-    height: 350px;
+    height: 560px;
     position: relative;
     overflow: hidden;
-    border-radius: 8px;
 
     img {
       display: block;
@@ -23,28 +28,30 @@
       object-fit: cover;
     }
 
-    .carousel-caption {
+    .top-carousel-caption {
       position: absolute;
       bottom: 0;
       left: 0;
       width: 100%;
-      padding: 20px;
+      padding: 40px 60px 48px;
       box-sizing: border-box;
       background: linear-gradient(
         transparent,
-        rgba(0, 0, 0, 0.7)
+        rgba(14, 52, 82, 0.75)
       );
       color: #fff;
 
       h3 {
-        margin: 0 0 8px;
-        font-size: 1.3rem;
+        margin: 0 0 12px;
+        font-size: 28px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
       }
 
       p {
         margin: 0;
-        font-size: 0.9rem;
-        line-height: 1.4;
+        font-size: 15px;
+        line-height: 1.8;
       }
     }
   }
@@ -69,5 +76,29 @@
 
   100% {
     transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .top-carousel {
+    .top-carousel-item {
+      height: 420px;
+
+      .top-carousel-caption {
+        padding: 24px 20px;
+
+        h3 {
+          font-size: 18px;
+        }
+
+        p {
+          font-size: 13px;
+
+          br {
+            display: none;
+          }
+        }
+      }
+    }
   }
 }

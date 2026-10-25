@@ -1,22 +1,26 @@
 <!DOCTYPE html>
-<html lang="jp">
+<html lang="ja">
 
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dental Clinic</title>
+    <title>さわやか歯科クリニック</title>
+    <meta name="description" content="さわやか歯科クリニックは、小さなお子様からご年配の方まで安心して通える、地域密着型の歯科医院です。">
     <link rel="icon" href="img/icon.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@3.0.2/destyle.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-64UC4BEhTGwk3eGpak4nO2jqtl7liTS+juXkSJ2gPAQPmlClQO7s5UgCeR6US48g" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" defer></script>
+    <script src="js/main.js" defer></script>
   </head>
 
   <body>
     <!-- header -->
     <header id="header" class="header-container">
-      <div class="header-log">
+      <div class="header-logo">
         <a href="index.html">
           <img src="img/logo2.svg" alt="さわやか歯科クリニック">
         </a>
@@ -25,49 +29,56 @@
       <!--nav-->
       <nav class="header-nav">
         <ul class="header-nav-list">
-          <li class="header-nav-item"><a href="index.html">診療案内</a></li>
-          <li class="header-nav-item"><a href="index.html">スタッフ紹介</a></li>
-          <li class="header-nav-item"><a href="index.html">お知らせ</a></li>
-          <li class="header-nav-item"><a href="index.html">ご予約</a></li>
-          <li class="header-nav-item"><a href="index.html">お問い合わせ</a></li>
+          <li class="header-nav-item"><a href="medical.html">診療案内</a></li>
+          <li class="header-nav-item"><a href="staff.html">スタッフ紹介</a></li>
+          <li class="header-nav-item"><a href="news.html">お知らせ</a></li>
+          <li class="header-nav-item"><a href="reservation.html">ご予約</a></li>
+          <li class="header-nav-item"><a href="contact.html">お問い合わせ</a></li>
         </ul>
       </nav>
+      <!-- ハンバーガーメニュー-->
+      <button class="toggle-btn" type="button" aria-label="メニューを開く" aria-expanded="false" >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="mask"></div>
     </header>
 
     <!-- main -->
     <main>
         <article>
           <!-- carousel -->
-          <section class="carousel-container">
+          <section class="top-carousel-container">
             <ul class="carousel">
               <!-- スライド1 -->
-              <li class="carousel-item">
+              <li class="top-carousel-item">
                 <img src="img/img4.jpg" alt="受付・処置室">
-                <div class="carousel-caption">
+                <div class="top-carousel-caption">
                   <h3>地域の皆様が安心して通える、家族みんなのための歯科医院</h3>
                   <p>当院は、小さなお子さまからご年配の方まで、どなたでも安心して通える歯科クリニックを目指しています。</p>
                 </div>
               </li>
               <!-- スライド2 -->
-              <li class="carousel-item">
+              <li class="top-carousel-item">
                 <img src="img/img1.jpg" alt="治療器具">
-                <div class="carousel-caption">
+                <div class="top-carousel-caption">
                   <h3>患者さんとの信頼関係を築く</h3>
                   <p>単に「治療をする」のではなく、患者さんの不安を和らげ、笑顔で通えることを大切にし、<br>最新の設備とやさしい診療で家族みんなの健康な歯を守れるようサポートしていきます。</p>
                 </div>
               </li>
               <!-- スライド3 -->
-              <li class="carousel-item">
+              <li class="top-carousel-item">
                 <img src="img/img9.jpg" alt="診療所">
-                <div class="carousel-caption">
+                <div class="top-carousel-caption">
                   <h3>清潔で快適な診療環境</h3>
                   <p>患者さんに安心して治療を受けていただけるよう、衛生管理を徹底 し、最新の滅菌システムを導入。<br>院内は明るく、清潔感のある快適な空間づくりを心がけています。</p>
                 </div>
               </li>
               <!-- スライド4 -->
-              <li class="carousel-item">
+              <li class="top-carousel-item">
                 <img src="img/img10.jpg" alt="キッズスペース">
-                <div class="carousel-caption">
+                <div class="top-carousel-caption">
                   <h3>小さなお子さまからご年配の方まで通いやすい環境</h3>
                   <p>お子さまが楽しく通えるように、キッズスペースを完備。<br>また、ご年配の方やお身体が不自由な方にも安心してご来院いただけるよう、バリアフリー設計 になっています。</p>
                 </div>
@@ -76,119 +87,160 @@
           </section>
 
           <!-- 当院が大切にしていること -->
-          <section class="our-features-container">
-            <div class="our-features-item">
-              <img src="img/img5.jpg" alt="診療風景">
-              <h2>痛みの少ないやさしい治療</h2>
-              <p>麻酔の工夫や最新の技術を取り入れ、痛みを最小限に抑えた治療 を心がけています。
-                <br>歯医者が苦手な方も、安心して通っていただけるよう配慮しています。</p>
-            </div>
+          <section class="our-features-container section">
+            <div class="inner">
+              <h2 class="section-title"><span>OUR POLICY</span>当院が大切にしていること</h2>
+              <div class="our-features-list">
+                <div class="our-features-item">
+                  <img src="img/img5.jpg" alt="診療風景">
+                  <div class="our-features-text">
+                    <h3>痛みの少ないやさしい治療</h3>
+                    <p>麻酔の工夫や最新の技術を取り入れ、痛みを最小限に抑えた治療 を心がけています。
+                      <br>歯医者が苦手な方も、安心して通っていただけるよう配慮しています。</p>
+                  </div>
+                </div>
             
-            <div class="our-features-item">
-              <img src="img/img7.jpg" alt="予防歯科">
-              <h2>お口の健康を守る予防歯科</h2>
-              <p>「痛くなったら行く」のではなく、むし歯や歯周病を防ぐ予防ケアを大切にしています。
-                <br>定期検診・クリーニングで、大切な歯を一生涯守ります。</p>
-            </div>
+                <div class="our-features-item">
+                  <img src="img/img7.jpg" alt="予防歯科">
+                  <div class="our-features-text">
+                    <h3>お口の健康を守る予防歯科</h3>
+                    <p>「痛くなったら行く」のではなく、むし歯や歯周病を防ぐ予防ケアを大切にしています。
+                      <br>定期検診・クリーニングで、大切な歯を一生涯守ります。</p>
+                  </div>
+                </div>
 
-            <div class="our-features-item">
-              <img src="img/img1.jpg" alt="設備">
-              <h2>清潔で最新の設備</h2>
-              <p>患者さんが安心して治療を受けられるよう、徹底した衛生管理と最新の歯科医療機器を導入。
-                <br>快適な環境で、質の高い治療を提供します。</p>
+                <div class="our-features-item">
+                  <img src="img/img1.jpg" alt="設備">
+                  <div class="our-features-text">
+                    <h3>清潔で最新の設備</h3>
+                    <p>患者さんが安心して治療を受けられるよう、徹底した衛生管理と最新の歯科医療機器を導入。
+                      <br>快適な環境で、質の高い治療を提供します。</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
 
           <!-- 当院の特徴 -->
-          <section class="unique-container">
-            <div class="unique-item">
-              <img src="img/img8.jpg" alt="診療環境">
-              <img src="img/img9.jpg" alt="診療環境">
-              <h2>清潔で快適な診療環境</h2>
-              <p>患者さんに安心して治療を受けていただけるよう、衛生管理を徹底 し、最新の滅菌システムを導入。
-                <br>院内は明るく、清潔感のある快適な空間づくりを心がけています。</p>
-            </div>
+          <section class="unique-container section section-bg">
+            <div class="inner">
+              <h2 class="section-title"><span>FEATURES</span>当院の特徴</h2>
+              <div class="unique-item">
+                <img src="img/img8.jpg" alt="診療環境">
+                <div class="unique-text">
+                  <h3>清潔で快適な診療環境</h3>
+                  <p>患者さんに安心して治療を受けていただけるよう、衛生管理を徹底 し、最新の滅菌システムを導入。
+                    <br>院内は明るく、清潔感のある快適な空間づくりを心がけています。</p>
+                </div>
+                <img src="img/img9.jpg" alt="診療環境">
+              </div>
 
-            <div class="unique-item">
-              <img src="img/img6.jpg" alt="バリアフリー">
-              <img src="img/img10.jpg" alt="キッズスペース">
-              <h2>小さなお子さまからご年配の方まで通いやすい</h2>
-              <p>お子さまが楽しく通えるように、キッズスペースを完備。
-                <br>また、ご年配の方やお身体が不自由な方にも安心してご来院いただけるよう、バリアフリー設計 になっています。</p>
+              <div class="unique-item">
+                <img src="img/img6.jpg" alt="バリアフリー">
+                <div class="unique-text">
+                  <h3>小さなお子さまからご年配の方まで通いやすい</h3>
+                  <p>お子さまが楽しく通えるように、キッズスペースを完備。
+                    <br>また、ご年配の方やお身体が不自由な方にも安心してご来院いただけるよう、バリアフリー設計 になっています。</p>
+                </div>
+                <img src="img/img10.jpg" alt="キッズスペース">
+              </div>
             </div>
           </section>
 
           <!-- 院長の紹介-->
-          <section class="docter-message-container">
-            <div class="docter-message-item">
-              <img src="img/doctor2_matsumoto.jpg" alt="院長">
+          <section class="docter-message-container section">
+            <div class="inner">
+              <h2 class="section-title"><span>GREETING</span>院長挨拶</h2>
               <h2>挨拶 さわやか歯科クリニック 院長 松本 貴子</h2>
-              <p>みなさま、こんにちは。
-                <br>「さわやか歯科クリニック」院長の松本 貴子です。
-                <br>当院は、小さなお子さまからご年配の方まで、安心して通える歯科クリニックを目指しています。
-                <br>歯医者に苦手意識を持つ方にも、やさしく丁寧な治療を提供し、リラックスできる環境を整えています。
-                <br>痛みを抑えた治療やわかりやすい説明を心がけ、不安なく通えるよう努めています。
-                <br>また、歯の健康は全身の健康につながるため、治療だけでなく 予防歯科 にも力を入れています。
-                <br>定期検診やクリーニングを通じて、みなさまの大切な歯を守り続けるお手伝いをしていきます。
-                <br>地域のみなさまにとって、「ここなら安心して通える」と思っていただけるクリニックを目指し、スタッフ一同、努力してまいります。
-                <br>どうぞよろしくお願いいたします。
-              </p>
+              <div class="docter-message-item">
+                <img src="img/doctor2_matsumoto.jpg" alt="院長 松本 貴子">
+                <div class="docter-message-text">
+                  <h3>挨拶 さわやか歯科クリニック 院長 松本 貴子</h3>
+                  <p>みなさま、こんにちは。
+                    <br>「さわやか歯科クリニック」院長の松本 貴子です。
+                    <br>当院は、小さなお子さまからご年配の方まで、安心して通える歯科クリニックを目指しています。
+                    <br>歯医者に苦手意識を持つ方にも、やさしく丁寧な治療を提供し、リラックスできる環境を整えています。
+                    <br>痛みを抑えた治療やわかりやすい説明を心がけ、不安なく通えるよう努めています。
+                    <br>また、歯の健康は全身の健康につながるため、治療だけでなく 予防歯科 にも力を入れています。
+                    <br>定期検診やクリーニングを通じて、みなさまの大切な歯を守り続けるお手伝いをしていきます。
+                    <br>地域のみなさまにとって、「ここなら安心して通える」と思っていただけるクリニックを目指し、スタッフ一同、努力してまいります。
+                    <br>どうぞよろしくお願いいたします。
+                  </p>
+                </div>
+              </div>
             </div>
           </section>
 
           <!-- スタッフの声 -->
-          <section class="staff-voice-blog">
-            <div class="staff-voice-container">
-              <dl class="staff-voice-list">
-                <dt class="staff-name">松本 貴子　まつもとたかこ</dt>
-                <dd class="staff-coment">患者さん一人ひとりに寄り添い、安心して通える歯科医院を目指しています。<br>痛みの少ない治療と、わかりやすい説明を心がけ、地域の皆さまのお口の健康をサポートいたします。<br>歯医者が苦手な方も、リラックスできるよう丁寧に対応いたしますので、どうぞ安心してご来院ください。
-                <br>
-                <br>得意な治療: むし歯治療・予防歯科・小児歯科
-                <br>趣味: 旅行・読書・カフェ巡り</dd>
+          <section class="staff-voice-blog section section-bg">
+            <div class="inner">
+              <div class="staff-voice-container">
+                <h2 class="section-title"><span>STAFF</span>スタッフの声</h2>
+                <dl class="staff-voice-list">
+                  <dt class="staff-name">松本 貴子　まつもとたかこ</dt>
+                  <dd class="staff-coment">患者さん一人ひとりに寄り添い、安心して通える歯科医院を目指しています。<br>痛みの少ない治療と、わかりやすい説明を心がけ、地域の皆さまのお口の健康をサポートいたします。<br>歯医者が苦手な方も、リラックスできるよう丁寧に対応いたしますので、どうぞ安心してご来院ください。
+                  <br>
+                  <br>得意な治療: むし歯治療・予防歯科・小児歯科
+                  <br>趣味: 旅行・読書・カフェ巡り</dd>
 
-                <dt class="staff-name">田中 健吾　たなかけんご</dt>
-                <dd class="staff-coment">お口の健康は、全身の健康にも大きく関わっています。<br>患者さんが長く健康な歯を維持できるよう、最適な治療とアドバイスを提供いたします。<br>治療に対する不安や疑問があれば、何でもお気軽にご相談ください。
-                <br>
-                <br>得意な治療: 口腔外科・親知らずの抜歯・歯周病治療
-                <br>趣味: ランニング・映画鑑賞・登山</dd>
 
-                <dt class="staff-name">鈴木 由佳　すずきゆか</dt>
-                <dd class="staff-coment">患者さんのお口の健康を守るため、クリーニングや予防ケアを担当しています。<br>歯磨きのコツや、デンタルフロスの使い方など、日々のケアについてもお伝えしていますので、お気軽にご相談ください。
-                <br>
-                <br>得意な分野: クリーニング・ホワイトニング・歯磨き指導
-                <br>趣味: ヨガ・お菓子作り・音楽鑑賞</dd>
-              </dl>
-            </div>
+                  <dt class="staff-name">田中 健吾　たなかけんご</dt>
+                  <dd class="staff-coment">お口の健康は、全身の健康にも大きく関わっています。<br>患者さんが長く健康な歯を維持できるよう、最適な治療とアドバイスを提供いたします。<br>治療に対する不安や疑問があれば、何でもお気軽にご相談ください。
+                  <br>
+                  <br>得意な治療: 口腔外科・親知らずの抜歯・歯周病治療
+                  <br>趣味: ランニング・映画鑑賞・登山</dd>
 
-            <!-- お知らせ -->
-            <div class="blog-container">
-              <dl class="blog-list">
-                <dt class="blog-title">さわやか歯科クリニックのホームページを開設しました！</dt>
-                <dd class="blog-text">このたび、さわやか歯科クリニックの公式ホームページを開設いたしました！</dd>
+                  <dt class="staff-name">鈴木 由佳　すずきゆか</dt>
+                  <dd class="staff-coment">患者さんのお口の健康を守るため、クリーニングや予防ケアを担当しています。<br>歯磨きのコツや、デンタルフロスの使い方など、日々のケアについてもお伝えしていますので、お気軽にご相談ください。
+                  <br>
+                  <br>得意な分野: クリーニング・ホワイトニング・歯磨き指導
+                  <br>趣味: ヨガ・お菓子作り・音楽鑑賞</dd>
+                </dl>
+                <a class="link-more" href="staff.html">スタッフ紹介を見る<i class="fa-solid fa-arrow-right"></i></a>
+              </div>
 
-                <dt class="blog-title">定期歯科検診で健康な歯を守りましょう！</dt>
-                <dd class="blog-text">毎日の歯磨きだけでは、むし歯や歯周病を完全に防ぐことは難しいものです。</dd>
+              <!-- お知らせ -->
+              <div class="blog-container">
+                <h2 class="section-title"><span>NEWS</span>お知らせ</h2>
+                <dl class="blog-list">
+                  <dt class="blog-title"><a href="news.html#news01">さわやか歯科クリニックのホームページを開設しました！</a></dt>
+                  <dd class="blog-text">このたび、さわやか歯科クリニックの公式ホームページを開設いたしました！</dd>
 
-                <dt class="blog-title">正しい歯磨きのコツ！毎日のケアでむし歯・歯周病を防ごう</dt>
-                <dd class="blog-text">毎日しっかり歯を磨いているのに、むし歯や歯ぐきの腫れに悩んでいる方も多いのではないでしょうか。</dd>
-              </dl>
+                  <dt class="blog-title"><a href="news.html#news02">定期歯科検診で健康な歯を守りましょう！</a></dt>
+                  <dd class="blog-text">毎日の歯磨きだけでは、むし歯や歯周病を完全に防ぐことは難しいものです。</dd>
+
+                  <dt class="blog-title"><a href="news.html#news03">正しい歯磨きのコツ！毎日のケアでむし歯・歯周病を防ごう</a></dt>
+                  <dd class="blog-text">毎日しっかり歯を磨いているのに、むし歯や歯ぐきの腫れに悩んでいる方も多いのではないでしょうか。</dd>
+                </dl>
+                <a class="link-more" href="news.html">お知らせ一覧へ<i class="fa-solid fa-arrow-right"></i></a>
+              </div>
             </div>
           </section>
 
           <!-- ご予約・お問い合わせ ボタン-->
-          <button class="btn btn-primary">ご予約はこちら</button>
-          <button class="btn btn-secondary">お問い合わせはこちら</button>
+          <section class="cta-container section">
+            <div class="inner">
+              <a class="btn btn-primary btn-cta" href="reservation.html"><i class="fa-regular fa-calendar-check"></i>ご予約はこちら</a>
+              <a class="btn btn-outline-primary btn-cta" href="contact.html"><i class="fa-regular fa-envelope"></i>お問い合わせはこちら</a>
+            </div>
+          </section>
 
           <!-- アクセス -->
-          <div class="access-container">
-            <h2>アクセス</h2>
-            <p>〒123-4567 東京都新宿区西新宿1-1-1<br>さわやか歯科クリニック</p>
-            <p>電話番号: 03-1234-5678</p>
-            <p>診療時間: 午前9:30-13:00 / 午後14:00-18:30</p>
-            <p>休診日: 水・日</p>
-            <p>※土曜日は午前のみ</p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d810.3201683245709!2d139.74884591076795!3d35.67009039829409!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b9278be8ddf%3A0x633ce80813b5c89e!2z44CSMTA1LTAwMDEg5p2x5Lqs6YO95riv5Yy66JmO44OO6ZaA77yR5LiB55uu77yT4oiS77yRIOOCsOODreODvOODkOODq-OCueOCr-OCqOOCoiAx6ZqO!5e0!3m2!1sja!2sjp!4v1792591290894!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-          </div>
+          <section class="access-container section section-bg">
+            <div class="inner">
+              <h2 class="section-title"><span>ACCESS</span>アクセス</h2>
+              <div class="access-info">
+                <p>〒123-4567 東京都新宿区西新宿1-1-1<br>さわやか歯科クリニック</p>
+                <p>電話番号: 03-1234-5678</p>
+                <p>診療時間: 午前9:30-13:00 / 午後14:00-18:30</p>
+                <p>休診日: 水・日</p>
+                <p>※土曜日は午前のみ</p>
+              </div>
+              <div class="access-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d810.3201683245709!2d139.74884591076795!3d35.67009039829409!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b9278be8ddf%3A0x633ce80813b5c89e!2z44CSMTA1LTAwMDEg5p2x5Lqs6YO95riv5Yy66JmO44OO6ZaA77yR5LiB55uu77yT4oiS77yRIOOCsOODreODvOODkOODq-OCueOCr-OCqOOCoiAx6ZqO!5e0!3m2!1sja!2sjp!4v1792591290894!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="さわやか歯科クリニックの地図"></iframe>
+              </div>
+            </div>
+          </section>
         </article>
     </main>
 
@@ -199,11 +251,11 @@
       <!-- footer nav -->
       <nav class="footer-nav">
         <ul class="footer-nav-list">
-          <li class="footer-nav-item"><a href="index.html">診療案内</a></li>
-          <li class="footer-nav-item"><a href="index.html">スタッフ紹介</a></li>
-          <li class="footer-nav-item"><a href="index.html">お知らせ</a></li>
-          <li class="footer-nav-item"><a href="index.html">ご予約</a></li>
-          <li class="footer-nav-item"><a href="index.html">お問い合わせ</a></li>
+          <li class="footer-nav-item"><a href="medical.html">診療案内</a></li>
+          <li class="footer-nav-item"><a href="staff.html">スタッフ紹介</a></li>
+          <li class="footer-nav-item"><a href="news.html">お知らせ</a></li>
+          <li class="footer-nav-item"><a href="reservation.html">ご予約</a></li>
+          <li class="footer-nav-item"><a href="contact.html">お問い合わせ</a></li>
         </ul>
       </nav>
     </footer>
