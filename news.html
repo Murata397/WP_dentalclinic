@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>さわやか歯科クリニック</title>
+    <meta name="description" content="さわやか歯科クリニックは、小さなお子さまからご年配の方まで安心して通える、地域密着型の歯科医院です。">
+    <link rel="icon" href="img/icon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@3.0.2/destyle.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-64UC4BEhTGwk3eGpak4nO2jqtl7liTS+juXkSJ2gPAQPmlClQO7s5UgCeR6US48g" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+  </head>
+
+  <body>
+    <!-- header -->
+    <header id="header" class="header-container">
+      <div class="header-logo">
+        <a href="index.html">
+          <img src="img/logo2.svg" alt="さわやか歯科クリニック">
+        </a>
+      </div>
+
+      <!--nav-->
+      <nav class="header-nav">
+        <ul class="header-nav-list">
+          <li class="header-nav-item"><a href="medical.html">診療案内</a></li>
+          <li class="header-nav-item"><a href="staff.html">スタッフ紹介</a></li>
+          <li class="header-nav-item"><a href="news.html">お知らせ</a></li>
+          <li class="header-nav-item"><a href="reservation.html">ご予約</a></li>
+          <li class="header-nav-item"><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+      </nav>
+
+      <!-- ハンバーガーメニュー（SP） -->
+      <button class="toggle-btn" type="button" aria-label="メニューを開く" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="mask"></div>
+    </header>
+
+    <!-- main -->
+    <main>
+      <article>
+        <!-- ページタイトル -->
+        <section class="page-header">
+          <div class="inner">
+            <h1 class="page-title"><span>NEWS</span>お知らせ</h1>
+          </div>
+        </section>
+
+        <!-- お知らせ一覧（※本文・日付はサンプル。WordPress化の際は投稿で管理） -->
+        <section class="news-container section">
+          <div class="inner">
+            <article id="news01" class="news-item">
+              <time class="news-date" datetime="2024-04-01">2024.04.01</time>
+              <h2 class="news-title">さわやか歯科クリニックのホームページを開設しました！</h2>
+              <div class="news-body">
+                <p>このたび、さわやか歯科クリニックの公式ホームページを開設いたしました！</p>
+                <p>当ホームページでは、診療内容や診療時間、アクセス方法のほか、休診日のお知らせやお口の健康に役立つ情報を発信してまいります。<br>また、Webからのご予約・お問い合わせも受け付けておりますので、どうぞご利用ください。</p>
+              </div>
+            </article>
+
+            <article id="news02" class="news-item">
+              <time class="news-date" datetime="2024-05-10">2024.05.10</time>
+              <h2 class="news-title">定期歯科検診で健康な歯を守りましょう！</h2>
+              <div class="news-body">
+                <p>毎日の歯磨きだけでは、むし歯や歯周病を完全に防ぐことは難しいものです。</p>
+                <p>歯と歯の間や歯ぐきの境目には、歯ブラシでは落としきれない汚れがたまりがちです。<br>3〜6か月に一度の定期検診で、専用の器具によるクリーニングと早期発見・早期治療を心がけましょう。</p>
+              </div>
+            </article>
+
+            <article id="news03" class="news-item">
+              <time class="news-date" datetime="2024-06-15">2024.06.15</time>
+              <h2 class="news-title">正しい歯磨きのコツ！毎日のケアでむし歯・歯周病を防ごう</h2>
+              <div class="news-body">
+                <p>毎日しっかり歯を磨いているのに、むし歯や歯ぐきの腫れに悩んでいる方も多いのではないでしょうか。</p>
+                <p>歯ブラシは鉛筆を持つように軽く握り、歯と歯ぐきの境目に45度の角度で当てて小刻みに動かすのがポイントです。<br>歯と歯の間はデンタルフロスや歯間ブラシを併用すると、より効果的に汚れを落とせます。</p>
+              </div>
+            </article>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <footer id="footer" class="footer-container">
+      <!-- 病院の情報 -->
+      <div class="footer-info">
+        <p class="footer-name">さわやか歯科クリニック</p>
+        <p>〒123-4567 東京都新宿区西新宿1-1-1</p>
+        <p>TEL: 03-1234-5678</p>
+        <p>診療時間: 午前9:30-13:00 / 午後14:00-18:30<br>（土曜日は午前のみ）</p>
+        <p>休診日: 水・日</p>
+      </div>
+
+      <!-- copyright -->
+      <p class="copyright">&copy;2024 さわやか歯科クリニック</p>
+
+      <!-- footer nav -->
+      <nav class="footer-nav">
+        <ul class="footer-nav-list">
+          <li class="footer-nav-item"><a href="medical.html">診療案内</a></li>
+          <li class="footer-nav-item"><a href="staff.html">スタッフ紹介</a></li>
+          <li class="footer-nav-item"><a href="news.html">お知らせ</a></li>
+          <li class="footer-nav-item"><a href="reservation.html">ご予約</a></li>
+          <li class="footer-nav-item"><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+</html>

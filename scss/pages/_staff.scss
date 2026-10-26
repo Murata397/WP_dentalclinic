@@ -1,0 +1,99 @@
+// スタッフ紹介
+.staff-container {
+  .staff-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 48px;
+
+    & + .staff-item {
+      margin-top: 64px;
+      padding-top: 64px;
+      border-top: 1px solid var(--color-border);
+    }
+
+    img {
+      width: 320px;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+  }
+
+  .staff-text {
+    flex: 1;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .staff-role {
+    display: inline-block;
+    margin-bottom: 8px !important;
+    padding: 2px 12px;
+    border-radius: 999px;
+    background-color: var(--color-main);
+    color: #fff;
+    font-size: 13px;
+  }
+
+  .staff-name {
+    margin-bottom: 20px;
+    font-size: 26px;
+    font-weight: 700;
+
+    span {
+      margin-left: 12px;
+      color: #7fa9c6;
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+
+  .staff-profile {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 8px 20px;
+    margin: 24px 0 0;
+    padding: 20px 24px;
+    border-radius: 8px;
+    background-color: var(--color-light);
+    font-size: 14px;
+
+    dt {
+      color: var(--color-main);
+      font-weight: 700;
+    }
+
+    dd {
+      margin: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .staff-container {
+    .staff-item {
+      flex-direction: column;
+      gap: 24px;
+
+      & + .staff-item {
+        margin-top: 40px;
+        padding-top: 40px;
+      }
+
+      img {
+        width: 70%;
+        margin: 0 auto;
+      }
+    }
+
+    .staff-name {
+      font-size: 22px;
+    }
+
+    .staff-text p br {
+      display: none;
+    }
+  }
+}

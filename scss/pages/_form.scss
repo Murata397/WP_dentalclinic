@@ -1,0 +1,109 @@
+// 予約・お問い合わせフォーム
+.form-container {
+  .inner {
+    max-width: 800px;
+  }
+
+  .form-lead {
+    margin-bottom: 40px;
+    padding: 20px 24px;
+    border-radius: 8px;
+    background-color: var(--color-light);
+    font-size: 14px;
+
+    a {
+      color: var(--color-main);
+      text-decoration: underline;
+    }
+  }
+
+  .form-row {
+    margin-bottom: 28px;
+  }
+
+  .form-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .required,
+  .optional {
+    padding: 0 8px;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  .required {
+    background-color: #d9534f;
+  }
+
+  .optional {
+    background-color: #999;
+  }
+
+  .form-control,
+  .form-select {
+    padding: 12px 16px;
+    border: 1px solid #c9d6df;
+  }
+
+  .form-date {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+
+    .invalid-feedback {
+      grid-column: 1 / -1;
+    }
+  }
+
+  .form-check-input:checked {
+    background-color: var(--color-main);
+    border-color: var(--color-main);
+  }
+
+  .form-agree {
+    padding: 20px 0;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .form-submit {
+    margin-top: 16px;
+  }
+
+  // 送信完了メッセージ
+  .form-complete {
+    padding: 48px 24px;
+    border: 2px solid var(--color-main);
+    border-radius: 8px;
+    text-align: center;
+
+    i {
+      margin-bottom: 16px;
+      color: var(--color-main);
+      font-size: 48px;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .form-container {
+    .form-lead br {
+      display: none;
+    }
+
+    .form-date {
+      grid-template-columns: 1fr;
+    }
+  }
+}
