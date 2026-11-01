@@ -32,6 +32,37 @@
   .news-body p {
     margin: 0 0 12px;
   }
+
+  // 「続きを読む」「閉じる」ボタン（文字の切り替えはjs/main.jsのnewsMore）
+  .news-more-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 4px;
+    color: var(--color-main);
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+
+    // 右側の矢印（全文を表示中は上向きに回転）
+    &::after {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-right: 2px solid currentColor;
+      border-bottom: 2px solid currentColor;
+      transform: translateY(-2px) rotate(45deg);
+      transition: transform 0.3s;
+    }
+
+    &[aria-expanded="true"]::after {
+      transform: translateY(2px) rotate(-135deg);
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
 }
 
 @media screen and (max-width: 767px) {

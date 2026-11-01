@@ -126,46 +126,85 @@
           </section>
 
           <!-- スタッフの声 -->
-          <section class="staff-voice-blog section section-bg">
+          <section class="staff-voice-news section section-bg">
             <div class="inner">
               <div class="staff-voice-container">
                 <h2 class="section-title"><span>STAFF</span>スタッフの声</h2>
                 <dl class="staff-voice-list">
-                  <dt class="staff-name">松本 貴子　まつもとたかこ</dt>
-                  <dd class="staff-coment">患者さん一人ひとりに寄り添い、安心して通える歯科医院を目指しています。<br>痛みの少ない治療と、わかりやすい説明を心がけ、地域の皆さまのお口の健康をサポートいたします。<br>歯医者が苦手な方も、リラックスできるよう丁寧に対応いたしますので、どうぞ安心してご来院ください。
-                  <br>
-                  <br>得意な治療: むし歯治療・予防歯科・小児歯科
-                  <br>趣味: 旅行・読書・カフェ巡り</dd>
-
-                  <dt class="staff-name">田中 健吾　たなかけんご</dt>
-                  <dd class="staff-coment">お口の健康は、全身の健康にも大きく関わっています。<br>患者さんが長く健康な歯を維持できるよう、最適な治療とアドバイスを提供いたします。<br>治療に対する不安や疑問があれば、何でもお気軽にご相談ください。
-                  <br>
-                  <br>得意な治療: 口腔外科・親知らずの抜歯・歯周病治療
-                  <br>趣味: ランニング・映画鑑賞・登山</dd>
-
-                  <dt class="staff-name">鈴木 由佳　すずきゆか</dt>
-                  <dd class="staff-coment">患者さんのお口の健康を守るため、クリーニングや予防ケアを担当しています。<br>歯磨きのコツや、デンタルフロスの使い方など、日々のケアについてもお伝えしていますので、お気軽にご相談ください。
-                  <br>
-                  <br>得意な分野: クリーニング・ホワイトニング・歯磨き指導
-                  <br>趣味: ヨガ・お菓子作り・音楽鑑賞</dd>
+                  <?php
+                    //取得したい投稿記事などの条件を引数として渡す。
+                    $args = array(
+                      // 投稿タイプを指定
+                      'post_type' => 'post',
+                      // カテゴリー名
+                      'category_name' => 'staff-voice',
+                      // 1ページに表示する件数
+                      'posts_per_page' => 3,
+                    );
+                    // データの取得（$postsはWordPressのグローバル変数と被るので別名にする）
+                    $staff_posts = get_posts($args);
+                    // 取得したデータの件数分ループ処理
+                    foreach ($staff_posts as $post):
+                      //投稿データをセット
+                      setup_postdata($post);
+                  ?>
+                  <!-- タイトル＝スタッフ名 -->
+                  <dt class="staff-name"><?php the_title(); ?></dt>
+                  <!-- 本文＝コメント（<br>以外のタグは取り除く）＋ACFの得意分野・趣味 -->
+                  <dd class="staff-comment">
+                    <?php echo trim(wp_kses(get_the_content(), array('br' => array()))); ?>
+                    <br>
+                    <br><?php echo esc_html(get_field('staff-skill-label')); ?>: <?php echo esc_html(get_field('staff-skill')); ?>
+                    <br>趣味: <?php echo esc_html(get_field('staff-hobby')); ?>
+                  </dd>
+                  <?php
+                    endforeach;
+                    // 使用した投稿データのリセット
+                    wp_reset_postdata();
+                  ?>
                 </dl>
-                <a class="link-more" href="staff.html">スタッフ紹介を見る<i class="fa-solid fa-arrow-right"></i></a>
+                <a class="link-more" href="<?php echo esc_url(get_category_link(get_category_by_slug('staff-voice'))); ?>">スタッフ紹介を見る<i class="fa-solid fa-arrow-right"></i></a>
               </div>
 
               <!-- お知らせ -->
-              <div class="blog-container">
+              <div class="top-news-container">
                 <h2 class="section-title"><span>NEWS</span>お知らせ</h2>
-                <dl class="blog-list">
-                  <dt class="blog-title"><a href="news.html#news01">さわやか歯科クリニックのホームページを開設しました！</a></dt>
-                  <dd class="blog-text">このたび、さわやか歯科クリニックの公式ホームページを開設いたしました！</dd>
+                <dl class="top-news-list">
+                  <?php
+                    //取得したい投稿記事などの条件を引数として渡す。
+                    $args = array(
+                      // 投稿タイプを指定
+                      'post_type' => 'post',
+                      // カテゴリー名（お知らせ。子カテゴリーの豆知識も含まれる）
+                      'category_name' => 'news',
+                      // 1ページに表示する件数
+                      'posts_per_page' => 3,
+                    );
+                    // データの取得
+                    $news_posts = get_posts($args);
+                    // 取得したデータの件数分ループ処理
+                    foreach ($news_posts as $post):
+                      //投稿データをセット
+                      setup_postdata($post);
 
-                  <dt class="blog-title"><a href="news.html#news02">定期歯科検診で健康な歯を守りましょう！</a></dt>
-                  <dd class="blog-text">毎日の歯磨きだけでは、むし歯や歯周病を完全に防ぐことは難しいものです。</dd>
-
-                  <dt class="blog-title"><a href="news.html#news03">正しい歯磨きのコツ！毎日のケアでむし歯・歯周病を防ごう</a></dt>
-                  <dd class="blog-text">毎日しっかり歯を磨いているのに、むし歯や歯ぐきの腫れに悩んでいる方も多いのではないでしょうか。</dd>
+                      // 本文のタグを取り除いて文字だけにする
+                      $text = wp_strip_all_tags(get_the_content());
+                      // 最初の「。」の位置を探す（日本語なのでmb_を使う）
+                      $pos = mb_strpos($text, '。');
+                      // 「。」があればそこまで、なければ全文
+                      $excerpt = ($pos !== false) ? mb_substr($text, 0, $pos + 1) : $text;
+                  ?>
+                  <!-- タイトル（お知らせ一覧ページのこの記事の位置へのリンク） -->
+                  <dt class="top-news-title"><a href="<?php echo home_url(); ?>/category/news#news-<?php the_ID(); ?>"><?php the_title(); ?></a></dt>
+                  <!-- 本文（最初の「。」まで） -->
+                  <dd class="top-news-text"><?php echo esc_html($excerpt); ?></dd>
+                  <?php
+                    endforeach;
+                    // 使用した投稿データのリセット
+                    wp_reset_postdata();
+                  ?>
                 </dl>
-                <a class="link-more" href="news.html">お知らせ一覧へ<i class="fa-solid fa-arrow-right"></i></a>
+                <a class="link-more" href="<?php echo home_url(); ?>/category/news">お知らせ一覧へ<i class="fa-solid fa-arrow-right"></i></a>
               </div>
             </div>
           </section>

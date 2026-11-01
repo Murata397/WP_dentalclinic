@@ -589,13 +589,13 @@ ol {
   line-height: 2;
 }
 
-.staff-voice-blog .inner {
+.staff-voice-news .inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
 }
-.staff-voice-blog .staff-voice-container,
-.staff-voice-blog .blog-container {
+.staff-voice-news .staff-voice-container,
+.staff-voice-news .top-news-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -607,34 +607,34 @@ ol {
   border-radius: 8px;
   background-color: #fff;
 }
-.staff-voice-blog .staff-voice-container .section-title,
-.staff-voice-blog .blog-container .section-title {
+.staff-voice-news .staff-voice-container .section-title,
+.staff-voice-news .top-news-container .section-title {
   margin-bottom: 32px;
   font-size: 22px;
 }
-.staff-voice-blog .staff-voice-container .link-more,
-.staff-voice-blog .blog-container .link-more {
+.staff-voice-news .staff-voice-container .link-more,
+.staff-voice-news .top-news-container .link-more {
   -ms-flex-item-align: end;
       align-self: flex-end;
   margin-top: auto;
   padding-top: 24px;
 }
-.staff-voice-blog .staff-name,
-.staff-voice-blog .blog-title {
+.staff-voice-news .staff-name,
+.staff-voice-news .top-news-title {
   margin-bottom: 8px;
   color: var(--color-main);
   font-size: 16px;
   font-weight: 700;
 }
-.staff-voice-blog .staff-coment,
-.staff-voice-blog .blog-text {
+.staff-voice-news .staff-coment,
+.staff-voice-news .top-news-text {
   margin: 0 0 24px;
   padding-bottom: 24px;
   border-bottom: 1px solid var(--color-border);
   font-size: 14px;
 }
-.staff-voice-blog .staff-coment:last-of-type,
-.staff-voice-blog .blog-text:last-of-type {
+.staff-voice-news .staff-coment:last-of-type,
+.staff-voice-news .top-news-text:last-of-type {
   margin-bottom: 0;
   border-bottom: none;
 }
@@ -717,12 +717,12 @@ ol {
   .docter-message-container .docter-message-text p br {
     display: none;
   }
-  .staff-voice-blog .inner {
+  .staff-voice-news .inner {
     grid-template-columns: 1fr;
     gap: 24px;
   }
-  .staff-voice-blog .staff-voice-container,
-  .staff-voice-blog .blog-container {
+  .staff-voice-news .staff-voice-container,
+  .staff-voice-news .top-news-container {
     padding: 32px 20px;
   }
   .access-container .access-map iframe {

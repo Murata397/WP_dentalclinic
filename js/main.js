@@ -100,6 +100,29 @@ const form = () => {
   });
 };
 
+const newsMore = () => {
+
+  //お知らせ一覧の「続きを読む」ボタン
+  const btns = document.querySelectorAll('.js-news-more');
+
+  btns.forEach((btn) => {
+    //同じ記事の「最初の一文」と「全文」
+    const body = btn.closest('.news-body');
+    const excerpt = body.querySelector('.news-excerpt');
+    const full = body.querySelector('.news-full');
+
+    //一文と全文を入れ替える
+    btn.addEventListener('click', () => {
+      const open = btn.getAttribute('aria-expanded') !== 'true';
+      excerpt.hidden = open;
+      full.hidden = !open;
+      btn.setAttribute('aria-expanded', open);
+      btn.textContent = open ? '閉じる' : '続きを読む';
+    });
+  });
+};
+
 menu();
 reserveDate();
 form();
+newsMore();
