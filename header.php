@@ -30,11 +30,11 @@
       <!--nav-->
       <nav class="header-nav">
         <ul class="header-nav-list">
-          <li class="header-nav-item"><a href="<?php echo home_url(); ?>">診療案内</a></li>
+          <li class="header-nav-item"><a href="<?php echo home_url(); ?>/medical">診療案内</a></li>
           <li class="header-nav-item"><a href="<?php echo home_url(); ?>/category/staff-voice">スタッフ紹介</a></li>
           <li class="header-nav-item"><a href="<?php echo home_url(); ?>/category/news">お知らせ</a></li>
-          <li class="header-nav-item"><a href="<?php echo home_url(); ?>">ご予約</a></li>
-          <li class="header-nav-item"><a href="<?php echo home_url(); ?>">お問い合わせ</a></li>
+          <li class="header-nav-item"><a href="<?php echo home_url(); ?>/reservation">ご予約</a></li>
+          <li class="header-nav-item"><a href="<?php echo home_url(); ?>/contact">お問い合わせ</a></li>
         </ul>
       </nav>
 

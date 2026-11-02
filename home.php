@@ -212,8 +212,8 @@
           <!-- ご予約・お問い合わせ ボタン-->
           <section class="cta-container section">
             <div class="inner">
-              <a class="btn btn-primary btn-cta" href="reservation.html"><i class="fa-regular fa-calendar-check"></i>ご予約はこちら</a>
-              <a class="btn btn-outline-primary btn-cta" href="contact.html"><i class="fa-regular fa-envelope"></i>お問い合わせはこちら</a>
+              <a class="btn btn-primary btn-cta" href="<?php echo home_url(); ?>/reservation"><i class="fa-regular fa-calendar-check"></i>ご予約はこちら</a>
+              <a class="btn btn-outline-primary btn-cta" href="<?php echo home_url(); ?>/contact"><i class="fa-regular fa-envelope"></i>お問い合わせはこちら</a>
             </div>
           </section>
 
