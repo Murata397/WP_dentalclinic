@@ -13,3 +13,4 @@ function dentalclinic_staff_voice_order($query) {
   }
 }
 add_action('pre_get_posts', 'dentalclinic_staff_voice_order');
+add_filter('wpcf7_autop_or_not', '__return_false');
